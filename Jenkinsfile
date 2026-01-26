@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Node24'
+        nodejs 'Node22'
     }
 
     environment {
@@ -19,8 +19,8 @@ pipeline {
             steps {
                 dir('backend'){
                     bat '''
-                    python -m venv %venv%
-                    %venv%\\Scripts\\activate
+                    python -m venv %VENV%
+                    call %VENV%\\Scripts\\activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
                     '''
@@ -45,7 +45,8 @@ pipeline {
                 }
             }
         }
-        post {
+}
+post {
             success {
                 echo 'Successfully Build'
             }
@@ -53,5 +54,4 @@ pipeline {
                 echo 'Build Failed'
         }
     }
-}
 }
