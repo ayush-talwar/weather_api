@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Frontend Setup'){
             steps {
-                dir('frontend'){
+                dir('frontend/weather'){
                     bat '''
                     npm install
                     '''
