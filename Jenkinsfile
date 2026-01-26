@@ -19,7 +19,7 @@ pipeline {
             steps {
                 dir('backend'){
                     bat '''
-                    python -m venv %VENV%
+                    "C:\Users\Dell\AppData\Local\Programs\Python\Python313\python.exe" -m venv %VENV%
                     call %VENV%\\Scripts\\activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
