@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Backend Setup'){
             steps {
-                dir('backend'){
+                dir('backend/weather_be'){
                     bat '''
                     "C:/Users/Dell/AppData/Local/Programs/Python/Python313/python.exe" -m venv %VENV%
                     call %VENV%/Scripts/activate
