@@ -1,0 +1,9 @@
+#frontend
+frontend/weather-app/node_modules/
+frontend/weather-app/.vscode/
+
+
+#backend
+backend/.env
+__pycache__/
+*.pyc
