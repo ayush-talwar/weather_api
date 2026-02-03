@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Backend Setup'){
             steps {
-                dir('weather_api/backend/weather_be'){
+                dir('backend/weather_be/'){
                     bat '''
                     "C:/Users/Dell/AppData/Local/Programs/Python/Python313/python.exe" -m venv %VENV%
                     call %VENV%/Scripts/activate
@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Frontend Setup'){
             steps {
-                dir('weather_api/frontend/weather'){
+                dir('weather_api/frontend/weather/'){
                     bat '''
                     npm install
                     '''
