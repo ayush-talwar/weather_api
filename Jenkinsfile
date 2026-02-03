@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Frontend Setup'){
             steps {
-                dir('weather_api/frontend/weather/'){
+                dir('frontend/weather/'){
                     bat '''
                     npm install
                     '''
@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Frontend Build'){
             steps {
-                dir('weather_api/frontend/weather'){
+                dir('frontend/weather/'){
                     bat '''
                     npm run build
                     '''
