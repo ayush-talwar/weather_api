@@ -1,6 +1,9 @@
 #frontend
-frontend/weather-app/node_modules/
-frontend/weather-app/.vscode/
+frontend/node_modules/
+frontend/weather/node_modules/
+frontend/weather/.vscode/
+frontend/weather/.env/
+frontend/weather/dist/
 
 
 #backend
